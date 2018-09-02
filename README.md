@@ -1,4 +1,4 @@
-# Damon: a Distributed peer-to-peer Aspect Middleware on Overlay Networks
+# Damon: a Distributed P2P AOP Middleware
 
 A fully distributed AOP middleware built on top of a structured P2P network (distributed hash table) and dynamic AOP (Aspect Oriented Programming) substrates. Its main aim is to provide the necessary abstractions and services to develop distributed aspects in large-scale scenarios.
 
