@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aspectwerkz>
+    <system id="DamonObservers">                  
+            <aspect class="damon.invokation.aspectwerkz.AspectInvokeObserver"></aspect>
+            <aspect class="damon.metalevel.aspectwerkz.MetaPointcutObserver"></aspect>            
+            <aspect class="damon.timer.aspectwerkz.TimerObserver"></aspect>          
+    </system>    
+    <system id="Samples">
+            <aspect class="damon.samples.monitor.SourceHooks"></aspect>
+            <aspect class="damon.samples.dht.SourceHooks"></aspect>
+    </system>
+    <system id="Tutorials">            
+            <aspect class="damon.tutorial.deploy.SourceHooks"></aspect>            
+            <aspect class="damon.tutorial.direct.SourceHooks"></aspect>                       
+            <aspect class="damon.tutorial.local.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.any.SourceHooks"></aspect>          
+            <aspect class="damon.tutorial.many.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.multi.SourceHooks"></aspect>            
+            <aspect class="damon.tutorial.metapointcut.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.around.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.metaadvice.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.redirect.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.synchro.SourceHooks"></aspect>
+            <aspect class="damon.tutorial.lazy.SourceHooks"></aspect>                        
+            <aspect class="damon.tutorial.xml.SourceHooks"></aspect>            
+    </system>
+    <system id="Test">
+            <aspect class="damon.test.g5k.deploy.SourceHooks"></aspect>
+            <aspect class="damon.test.g5k.multi.SourceHooks"></aspect> 
+            <aspect class="damon.test.g5k.fault.SourceHooks"></aspect>
+            <aspect class="damon.test.g5k.hops.SourceHooks"></aspect>               
+    </system>        
+</aspectwerkz>

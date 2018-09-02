@@ -1,0 +1,92 @@
+* Version 2.4 :
+
+- Adapted to work with FreePastry 2.1 (EasyPastry 0.2)
+
+- Enabled the Around Meta-Pointcut for ANY abstraction
+
+- New tutorials : any, around, and redirect
+
+- Source Hook Type Optional -> Regarding the Source Hook definition type
+
+- AnnotationSwapper Deprecated --> AnnotationExtractor + AnnotationInfo  
+
+
+* Version 2.3 :
+
+- New Services : Timer and Update
+
+- Distributed Meta-Aspect : 
+  
+  Cancel mechanism 
+  Args or Result modification  
+
+- Message Service Removed (Better Invocations)
+
+- New Package : damon.util.collections
+
+- Startup Speedup (Registry Improvements) 
+
+- DHT Complete Sample (Proof-of-Concept)
+
+- Tutorials Reorganized
+
+- General : Some bugs fixed
+
+
+* Version 2.2 :
+
+- RemoteMetaAdvice : support
+
+- RemoteMetaPointcut : improvements
+
+- General : Some bugs fixed
+
+
+* Version 2.1 :
+
+- SourceHook Implementation
+
+- Multi-Node Persistence : Storage Directory by HostName 
+
+- G5K Tests
+
+- Multi-ClassLoader Support : DamonProxy
+
+* Version 2.0 :
+
+- Dermi independent :
+
+  New CastService using Scribe
+  AspectStorage and Registry using New PersistenceHandler (i.e. Bunshin)
+  
+- Aspect Remoting :
+  
+  Remote pointcut
+  Remote advice
+  Meta-pointcut
+  
+- XML distributed aspect definition
+
+- Junit Testbed
+
+* Version 1.2
+
+- Refactoring :
+
+  getTreeMembers method renamed --> damon.reflection.thisEndPoint.getClosestGroupMembers
+
+  Annotations : target --> group
+
+  AspectObserver --> AspectMessageObserver
+
+  damon.* --> damon.core.*
+
+- Bugs fixed :
+
+  getInstances (aspectName) 
+
+- Code updates :
+
+  AspectCommunication --> added AspectName in notify methods & valueArrived listener
+  Annotations : LOCAL_POINTCUT
+

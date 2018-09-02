@@ -1,0 +1,54 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="distributed-aspect">      
+      <xsd:attribute name="name" type="xsd:string" use="required" />
+      <xsd:attribute name="abstraction" type="xsd:string" use="required" />
+      <xsd:attribute name="num" type="xsd:integer"/>
+      <xsd:attribute name="target" type="xsd:string" use="required" />
+      <xsd:attribute name="state" type="xsd:string"/>
+      
+        <xsd:complexType>
+          <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element ref="offered" />
+          </xsd:sequence>
+          <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element ref="required" />
+          </xsd:sequence>
+          <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element ref="meta-pointcut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="offered">
+        <xsd:complexType>        
+          <xsd:attribute name="name" type="xsd:string" use="required" />
+          <xsd:attribute name="type" type="xsd:string" use="required" />
+          <xsd:attribute name="id" type="xsd:string" use="required" />
+          <xsd:attribute name="abstraction" type="xsd:string" use="required" />
+          <xsd:attribute name="num" type="xsd:integer"/>
+          <xsd:attribute name="target?" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      
+      <xsd:element name="required">
+        <xsd:complexType>        
+          <xsd:attribute name="name" type="xsd:string" use="required" />
+          <xsd:attribute name="type" type="xsd:string" use="required" />
+          <xsd:attribute name="id" type="xsd:string" use="required" />
+          <xsd:attribute name="abstraction" type="xsd:string" use="required" />
+          <xsd:attribute name="num" type="xsd:integer" />
+          <xsd:attribute name="target" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      
+      <xsd:element name="meta-pointcut">
+        <xsd:complexType>        
+          <xsd:attribute name="name" type="xsd:string" use="required" />
+          <xsd:attribute name="type" type="xsd:string" use="required" />
+          <xsd:attribute name="id" type="xsd:string" use="required" />          
+          <xsd:attribute name="target" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      
+    </xsd:schema>

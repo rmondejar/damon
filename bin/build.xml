@@ -1,0 +1,98 @@
+<project name="Damon" default="main" basedir=".">
+
+  <path id="base.path">
+      <pathelement path="${classpath}"/>
+      <fileset dir="../lib">
+        <include name="**/*.jar"/>
+      </fileset>
+       <fileset dir="../classes">
+        <include name="**/*.classes"/>
+      </fileset>
+    </path>
+
+
+
+ <!-- ======================== Copy static files ========================= -->
+	<target name="prepare">
+		<!-- Create destination directories -->
+		<mkdir dir="../classes"/>
+	</target>
+
+
+    <target name="compile" depends="prepare">
+	    <javac srcdir="../src"
+   	        deprecation="true"
+   	        destdir="../classes"
+   	        debug = "true"
+                debuglevel="lines,vars,source">
+   	    <classpath refid="base.path"/>      
+    	</javac>      
+	</target>
+	
+	
+    <target name="compile15" depends="prepare">
+	    <javac 	    
+	          source="1.5" 
+	          target="1.5"
+	          srcdir="../src"
+   	        deprecation="true"
+   	        destdir="../classes"
+   	        debug = "true"
+                debuglevel="lines,vars,source">
+   	    <classpath refid="base.path"/>      
+    	</javac>      
+	</target>
+
+	<target name="clean">
+	    <delete dir="../classes"/>
+	   <delete file="../lib/damon.jar"/>
+  	</target>
+  
+	<target name="dist">	     
+   		 <jar jarfile="../lib/damon.jar"
+   	          basedir="../classes">
+          </jar>               		 
+  	</target>
+  	
+  	<target name="dist15">	     
+   		 <jar jarfile="../lib/damon15.jar"
+   	          basedir="../classes">
+          </jar>               		 
+  	</target>
+
+    <target name="api">
+	<javadoc
+           destdir="../docs/api"
+           author="true"
+           version="true"
+           use="true"
+           verbose="false"
+           windowtitle="Damon">
+	   <classpath refid="base.path"/>
+ 	   <fileset dir="../src" defaultexcludes="yes">
+      			<include name="damon/**/*.java" />      	              
+      			<exclude name="damon/samples/**"/>
+      			<exclude name="damon/test/**"/>
+    		</fileset>
+  		</javadoc>
+  	</target>
+	
+	<target name="all" depends="clean,prepare,compile,dist"/>
+	<target name="all15" depends="clean,prepare,compile15,dist"/>
+  <target name="only15" depends="clean,prepare,compile15,dist15"/>  
+  <target name="main" depends="all"/>
+
+
+  <!-- =============================== Help =============================== -->
+  <target name="targets">
+    <echo message=""/>
+    <echo message="ANT build targets for Damon"/>
+    <echo message=""/>
+    <echo message="The following targets are available:"/>
+    <echo message="  all                  Clean, then create distribution"/>
+    <echo message="  clean                Clean build and dist directories"/>
+    <echo message="  api                  Create the API with JavaDoc"/>
+    <echo message="  dist                 Create distribution"/>
+  </target>
+
+</project>

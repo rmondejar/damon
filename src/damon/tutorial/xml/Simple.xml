@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<distributed-aspect>
+  <name>damon.tutorial.xml.Simple</name>
+  <abstraction>DIRECT</abstraction>
+  <target>p2p://simplehost</target>
+  <state>Stateless</state>
+</distributed-aspect>

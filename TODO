@@ -1,0 +1,30 @@
+- WARNINGS : 
+
+* Method with invoke but without annotation!! 
+
+* Method with annotation but is not public!!(protected?)
+
+
+- LOGGING --> Invocations, Persistence ...
+
+- Creation Pulse -> Before HotDeployment -> Thread Pulse While No Aspect is Registered
+
+- SourceHook Dectection -> Class not found? -> Warning?
+
+- SourceHook --> Generate New Advice to filter pointcuts by Args in AspectRemoting
+
+- Invoke(MethodName, etc) --> MethodName ?
+
+- Lazy Invocation -> Asynchronous + Different Id's --> TEST
+
+- RemoteCondition --> RemoteJoinPoint ?
+
+- Error Handling : 
+
+* Capture Exceptions on AspectRemoting
+
+* Check method annotation?
+
+* Last invokation of this method, return Exception (code)
+
+* Receive Exception --> Provocate Exception in the waiting for Exception (code) 
